@@ -1,7 +1,7 @@
 class Triki
   module ConfigParser
     def self.cast_bindings(bindings) : ConfigHash
-      type_hash = ConfigHash.new(:keep)
+      type_hash = ConfigHash.new
       bindings.each do |k, v|
         type_hash[k] = cast_table(v)
       end
